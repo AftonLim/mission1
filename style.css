@@ -52,14 +52,6 @@ ul > a:hover{
     font-size: 22px;
 }
 
-/* Image styling */
-#popimg{
-    max-width: 50%;
-    height: auto;
-}
-
-/* Body Css */
-/* Left Section */
 #left{
     margin: 0px 20px 100px;
     width: 40%;
@@ -73,20 +65,55 @@ ul > a:hover{
 #right{
     display: flex;
     width: 60%;
+    margin: 0;
+}
+
+/* Image styling */
+#popimg{
+    max-width: 70%;
+    height: auto;
     justify-content: center;
-    margin: 0;
 }
 
-/* Pop Figures Transitions and Image */
-#figurines > img{
-    width: 30%;
-    transition: width 2s;
-    margin: 0;
+/* Hides images on default */
+.Slideshow{
+    display: none;
 }
 
-#figurines > img:hover{
-    width: 40%;
+.prev, .next{
+    top: 50%;
+    position: absolute;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
 }
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 /* Footer Section */
 footer{
