@@ -24,3 +24,52 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+let bgColorIndex = 0;
+let fontColorIndex = 0;
+let buttonBgColorIndex = 0;
+let buttonColorIndex = 0;
+
+//Dark Mode Activation
+function toggleDarkmode(){
+  const bgColor = ["black", "white"];
+  const fontColor = ["white", "black"];
+  const buttonBgColor = ["black", "white"];
+  const buttonColor = ["white", "black"];
+
+  let changeColor = document.getElementById('main');
+  let changeButton = document.getElementsByClassName('buttons');
+  changeColor.style.backgroundColor = bgColor[bgColorIndex];
+  changeColor.style.color = fontColor[fontColorIndex];
+  changeButton.style.backgroundColor = buttonBgColor[buttonBgColorIndex];
+  changeButton.style.color = buttonColor[buttonColorIndex]
+  console.log("Changed colour");
+
+  //Text and Background
+  if(bgColorIndex === bgColor.length - 1) {
+    bgColorIndex = 0;
+  } else {
+    bgColorIndex++; 
+  }
+
+  if(fontColorIndex === fontColor.length - 1) {
+    fontColorIndex = 0;
+  } else {
+    fontColorIndex++; 
+  }
+
+  //Button (Temp Fix)
+  if(buttonBgColorIndex === buttonBgColor.length - 1) {
+    buttonBgColorIndex = 0;
+  } else {
+    buttonBgColorIndex++; 
+  }
+
+  if(buttonColorIndex === buttonColor.length - 1) {
+    buttonColorIndex = 0;
+  } else {
+    buttonColorIndex++; 
+  }
+
+
+}

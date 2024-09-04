@@ -52,14 +52,15 @@ ul > a:hover{
     font-size: 22px;
 }
 
+
 #left{
     margin: 0px 20px 100px;
     width: 40%;
 }
 
-#left > p, h1{
+/* #left > p, h1{
     color: black;
-}
+} */
 
 /* Right section */
 #right{
@@ -80,9 +81,10 @@ ul > a:hover{
     display: none;
 }
 
+/* Buttons */
 .prev, .next{
     top: 50%;
-    position: absolute;
+    position: fixed;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -133,4 +135,6 @@ footer > p{
 #main {
     display: flex;
     align-items: center;
+    background-color: white;
+    color: black;
 }
