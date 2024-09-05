@@ -25,6 +25,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
+//Index/counts for background changes
 let bgColorIndex = 0;
 let fontColorIndex = 0;
 let buttonBgColorIndex = 0;
@@ -38,11 +39,17 @@ function toggleDarkmode(){
   const buttonColor = ["white", "black"];
 
   let changeColor = document.getElementById('main');
-  let changeButton = document.getElementsByClassName('buttons');
+  let changeButton = document.querySelector('.dark');
+  let changePrev = document.querySelector(".prev");
+  let changeNext = document.querySelector(".next");
+
   changeColor.style.backgroundColor = bgColor[bgColorIndex];
   changeColor.style.color = fontColor[fontColorIndex];
+
   changeButton.style.backgroundColor = buttonBgColor[buttonBgColorIndex];
   changeButton.style.color = buttonColor[buttonColorIndex]
+  changePrev.style.color = buttonColor[buttonColorIndex]
+  changeNext.style.color = buttonColor[buttonColorIndex]
   console.log("Changed colour");
 
   //Text and Background

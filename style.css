@@ -28,15 +28,15 @@ nav > ul{
 }
 
 /* Link stying */
-ul > a:link{
+li > a:link{
     color: white;
 }
 
-ul > a:visited{
+li > a:visited{
     color: beige;
 }
 
-ul > a:hover{
+li > a:hover{
     color: yellow;
     cursor: pointer;
 }
@@ -58,9 +58,6 @@ ul > a:hover{
     width: 40%;
 }
 
-/* #left > p, h1{
-    color: black;
-} */
 
 /* Right section */
 #right{
